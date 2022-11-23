@@ -1,0 +1,12 @@
+{
+	"name": "DailyCoding",
+	"version": "1.0.0",
+	"description": "solve programs daily",
+	"main": "index.js",
+	"repository": "https://github.com/GunalBondre/DailyCoding.git",
+	"author": "gunal bondre <bondre.gunal@gmail.com>",
+	"license": "MIT",
+	"scripts": {
+		"test": "jest"
+	}
+}
