@@ -6,7 +6,7 @@ var removeElement = function (nums, val) {
 			zeroIdx++;
 		}
 	}
-	return zeroIdx;
+	return nums.slice(0, zeroIdx);
 };
 
-console.log(removeElement([3, 3, 1, 2], 3));
+console.log(removeElement([4, 3, 1, 2, 7, 6], 2));
