@@ -1,12 +1,14 @@
 var numIdenticalPairs = function (nums) {
-	let count = 0;
-	for (let i in nums) {
-		for (let j in nums) {
-			if (nums[i] === nums[j] && i < j) {
-				count++;
-			}
+	let count = {};
+	let res = 0;
+	for (let i of nums) {
+		if (count[i]) {
+			res += count[i];
+			count[i] += 1;
+		} else {
+			count[i] = 1;
 		}
 	}
-	return count;
+	return res;
 };
 console.log(numIdenticalPairs([1, 2, 3, 1, 1, 3]));
