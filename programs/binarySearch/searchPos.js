@@ -17,22 +17,17 @@ var searchRange = function (nums, target) {
 	let low = 0;
 	let high = nums.length - 1;
 	let ans = [];
+	if (nums.length === 0) return -1;
 	while (low + 1 < high) {
 		let mid = low + Math.floor((high - low + 1) / 2);
 
-		if (nums[mid] === target) {
-			ans[0] = mid;
-			high = mid;
-		}
-		if (nums[mid] < target) {
-			low = mid;
-			ans[1] = low;
-		} else {
-			high = mid;
-			ans[1] = high;
-		}
+		// if (nums[mid] === target) return mid;
+		if (nums[mid] < target) low = mid;
+		else high = mid;
 	}
-	return ans;
+	if (nums[low] === target) return low;
+	if (nums[high] === target) return high;
+	return low && high ? [low, high] : [-1, -1];
 };
 
-console.log(searchRange([5, 7, 7, 8, 8, 10], 7));
+console.log(searchRange([5, 7, 7, 8, 8, 10], 23));
