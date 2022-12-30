@@ -1,5 +1,5 @@
 {
-	"name": "DailyCoding",
+	"name": "dailycoding",
 	"version": "1.0.0",
 	"description": "solve programs daily",
 	"main": "index.js",
