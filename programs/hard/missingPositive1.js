@@ -4,7 +4,6 @@ const missing = (arr) => {
 	for (let i in arr) {
 		map.set(arr[i], i);
 	}
-	console.log(map);
 
 	for (let i = 1; i <= arr.length; i++) {
 		if (!map.has(i)) return i;
