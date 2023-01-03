@@ -3,7 +3,7 @@ const dec2bin = (decimal, result = '') => {
 		return result;
 	}
 
-	result = (decimal % 2) + result;
+	result += decimal % 2;
 	return dec2bin(parseInt(decimal / 2), result);
 };
 
