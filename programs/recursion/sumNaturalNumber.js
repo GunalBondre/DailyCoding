@@ -1,9 +1,7 @@
-const sum = (number, ans) => {
-	if (number === 0) return ans;
+const sum = (number) => {
+	if (number === 0) return number;
 
-	ans = ans + number;
-
-	return sum(number - 1, ans);
+	return number + sum(number - 1);
 };
 
-console.log(sum(10, 0));
+console.log(sum(10));
