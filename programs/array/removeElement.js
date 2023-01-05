@@ -6,6 +6,7 @@ var removeElement = function (nums, val) {
 			zeroIdx++;
 		}
 	}
+	console.log(nums);
 	return nums.slice(0, zeroIdx);
 };
 
