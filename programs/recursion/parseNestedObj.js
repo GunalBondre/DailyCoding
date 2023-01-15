@@ -28,14 +28,12 @@ const array = [
 const searchTerm = 'https://myURL.com';
 let result = [];
 
-const parseObj = (element) => {
+const findItem = (element) => {
 	element.forEach((item) => {
 		searchItem(item);
 	});
-
 	return result;
 };
-
 const searchItem = (item) => {
 	Object.keys(item).forEach((key) => {
 		if (typeof item[key] === 'object') {
@@ -49,5 +47,29 @@ const searchItem = (item) => {
 		}
 	});
 };
+// const searchTerm = 'https://myURL.com';
+// let result = [];
 
-console.log(parseObj(array));
+// const parseObj = (element) => {
+// 	element.forEach((item) => {
+// 		searchItem(item);
+// 	});
+
+// 	return result;
+// };
+
+// const searchItem = (item) => {
+// 	Object.keys(item).forEach((key) => {
+// 		if (typeof item[key] === 'object') {
+// 			searchItem(item[key]);
+// 		}
+// 		if (typeof item[key] === 'string') {
+// let searchRegEx = new RegExp(searchTerm, 'gi');
+// 			if (item[key].match(searchRegEx)) {
+// 				result.push(item[key]);
+// 			}
+// 		}
+// 	});
+// };
+
+console.log(findItem(array));
