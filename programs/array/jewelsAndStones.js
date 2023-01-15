@@ -1,13 +1,16 @@
 const jewelsAndStones = (jewels, stones) => {
-	let count = 0;
+	let count = {};
+	let counter = 0;
+	for (let i in jewels) {
+		count[jewels[i]] = count[jewels[i]] + 1 || 1;
+	}
 	for (let i in stones) {
-		for (let j in jewels) {
-			if (stones[i] === jewels[j]) {
-				count++;
-			}
+		if (count[stones[i]]) {
+			counter++;
 		}
 	}
-	return count;
+
+	return counter;
 };
 
-console.log(jewelsAndStones('z', 'ZZZ'));
+console.log(jewelsAndStones('aA', 'aAAbbbb'));
