@@ -4,16 +4,10 @@ var minSubArrayLen = function (target, nums) {
 	let sum = 0;
 	let min = Infinity;
 	while (windowEnd < nums.length) {
-		sum += nums[windowEnd];
-		if (sum < target) {
-			windowEnd++;
-		} else if (sum >= target) {
-			min = Math.min(min, windowEnd - windowStart + 1);
-
-			sum -= nums[windowStart];
-			sum = 0;
-			windowStart++;
-			windowEnd = windowStart;
+		sum += nums[windowEnd++];
+		while (sum >= target) {
+			min = Math.min(min, windowEnd - windowStart);
+			sum -= nums[windowStart++];
 		}
 	}
 	return min === Infinity ? 0 : min;

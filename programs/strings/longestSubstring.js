@@ -5,14 +5,12 @@ var lengthOfLongestSubstring = function (s) {
 	let set = new Set();
 	if (!s.length) return 0;
 
-	while (right <= s.length) {
+	while (right < s.length) {
 		if (!set.has(s[right])) {
-			set.add(s[right]);
-			right++;
+			set.add(s[right++]);
 			max = Math.max(max, set.size);
 		} else {
-			set.delete(s[left]);
-			left++;
+			set.delete(s[left++]);
 		}
 	}
 	return max;
