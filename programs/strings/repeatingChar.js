@@ -8,14 +8,12 @@ var longestSubstring = function (s, k) {
 	while (windowEnd < s.length) {
 		if (!map.has(s[windowEnd])) {
 			map.set(s[windowEnd++]);
-			counter++;
 		} else {
 			map.delete(s[windowStart++]);
 			count++;
 		}
 	}
-
-	console.log(counter, count);
+	return count;
 };
 
 console.log(longestSubstring('ababbc', 2));
