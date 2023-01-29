@@ -1,6 +1,6 @@
 var rob = function (arr, n, start) {
 	let prev2 = 0;
-	let prev1 = arr[0];
+	let prev1 = 0;
 
 	for (let i = start; i < n; i++) {
 		let incl = prev2 + arr[i];
@@ -16,7 +16,7 @@ var rob = function (arr, n, start) {
 let choice = (arr) => {
 	let n = arr.length;
 
-	let ans = Math.max(rob(arr, n - 1, 1), rob(arr, n, 2));
+	let ans = Math.max(rob(arr, n - 1, 0), rob(arr, n, 1));
 	return ans;
 };
 
