@@ -7,7 +7,6 @@ var reverseWords = function (str) {
 		}
 	}
 	return rev.trim();
-	// return strArr.reverse().join(' ');
 };
 
 console.log(reverseWords('a good   example'));
