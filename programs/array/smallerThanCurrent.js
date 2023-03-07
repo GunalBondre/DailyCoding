@@ -9,6 +9,7 @@ var smallerNumbersThanCurrent = function (nums) {
 		}
 		res.push(count);
 	}
+
 	return res;
 };
 

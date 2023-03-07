@@ -14,4 +14,4 @@ var alternateDigitSum = function (n) {
 	return sum;
 };
 
-console.log(alternateDigitSum(10));
+console.log(alternateDigitSum(521));

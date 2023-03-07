@@ -14,4 +14,4 @@ var getConcatenation = function (nums) {
 	return arr;
 };
 
-console.log(getConcatenation([1, 2, 3, 4]));
+console.log(getConcatenation([5, 4, 3, 2]));
