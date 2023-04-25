@@ -17,7 +17,6 @@
 
 const licenseKey = (str, k) => {
 	str = str.split('-');
-	console.log(str);
 	let arr = [];
 	let count = 0;
 	let res = '';
