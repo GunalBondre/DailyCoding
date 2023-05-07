@@ -1,17 +1,21 @@
 var combine = function (n, k) {
-	let arr = [];
-	let start = 1;
-	let end = 2;
+	const result = [];
 
-	while (end <= n) {
-		arr.push([start, end]);
-		end++;
-		if (end === n) {
-			start++;
-			end = start + 1;
+	const backtrack = (current, start) => {
+		if (current.length === k) {
+			result.push([...current]);
+		} else {
+			for (let i = start; i <= n; i++) {
+				current.push(i);
+				backtrack(current, i + 1);
+				current.pop();
+			}
 		}
-	}
-	return arr;
+	};
+
+	backtrack([], 1);
+
+	return result;
 };
 
 console.log(combine(4, 2));
