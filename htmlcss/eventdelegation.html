@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>EventDelegation</title>
+	</head>
+	<body>
+		<ul class="parentList">
+			<li>item1</li>
+			<li>item2</li>
+			<li>item3</li>
+		</ul>
+
+		<script>
+			const parentList = document.querySelector('.parentList');
+			parentList.addEventListener('click', function (event) {
+				if (event.target.tagName == 'LI') {
+					var clicked = event.target;
+					console.log('clicked', clicked.innerText);
+				}
+			});
+		</script>
+	</body>
+</html>

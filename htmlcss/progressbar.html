@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			.progress {
+				height: 20px;
+				width: 0;
+				background-color: red;
+			}
+		</style>
+		<script>
+			function progress() {
+				var progressBar = document.querySelector('.progress');
+				var progress = 0;
+				const interval = setInterval(() => {
+					if (progress >= 100) {
+						clearInterval(interval);
+						return 0;
+					}
+					progress += 10;
+					progressBar.style.width = progress + '%';
+				}, 1000);
+			}
+		</script>
+	</head>
+	<body>
+		<div class="progress"></div>
+		<button onclick="progress()">clik here</button>
+	</body>
+</html>

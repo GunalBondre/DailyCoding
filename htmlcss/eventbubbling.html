@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>event bubble</title>
+	</head>
+	<body>
+		<div class="outer">
+			<div class="inner">
+				<button class="button">hello</button>
+			</div>
+		</div>
+
+		<script>
+			document.querySelector('.outer').addEventListener(
+				'click',
+				function (e) {
+					console.log('outer clicked');
+				},
+				true
+			);
+			document.querySelector('.inner').addEventListener(
+				'click',
+				function (e) {
+					console.log('inner clicked');
+				},
+				true
+			);
+
+			document.querySelector('.button').addEventListener(
+				'click',
+				function (e) {
+					console.log('button clicked');
+				},
+				true
+			);
+		</script>
+	</body>
+</html>

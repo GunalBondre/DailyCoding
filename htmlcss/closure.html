@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<script>
+			function createbutton(message) {
+				var button = document.createElement('button');
+				button.innerText = message;
+				button.addEventListener('click', function () {
+					alert(message);
+				});
+				document.body.appendChild(button);
+			}
+
+			createbutton('button1');
+			createbutton('button2');
+			createbutton('button3');
+		</script>
+	</body>
+</html>
